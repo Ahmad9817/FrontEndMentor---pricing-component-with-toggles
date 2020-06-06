@@ -1,0 +1,244 @@
+.hey {
+    background: rgb(163, 168, 240)
+     rgb(105, 111, 221)
+     rgb(246, 246, 254)
+     rgb(179, 181, 198)
+     rgb(109, 112, 141)
+     rgb(73, 76, 95);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.background-image {
+    background: url("images/bg-top.svg") top right/auto 80% no-repeat;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+
+body {
+    /* padding: 1rem; */
+    margin: 0;
+    background: rgb(246, 246, 254);
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    text-align: center;
+    margin: 4rem 0;
+}
+
+h1 {
+    color: rgb(109, 112, 141);
+}
+
+header h2 {
+    color: rgb(179, 181, 198);
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+/* switch */
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+    vertical-align: middle;
+    margin: 0 1.5rem;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(to right, rgb(163, 168, 240), rgb(105, 111, 221));
+    border-radius: 25px;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 3.7px;
+    bottom: 3.7px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+input:checked + .slider::before {
+    transform: translateX(20.3px);
+}
+
+main {
+    margin: 4rem 0;
+}
+
+section.plans {
+    width: 87%;
+    max-width: 400px;
+    min-width: 320px;
+    margin: 2rem auto;
+    border-radius: 10px;
+    background: white;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 0 15px 0.3px rgba(179, 181, 198, 0.26);
+    color: rgb(109, 112, 141);
+}
+
+h2 {
+    font-size: 1.2rem;
+}
+
+h3 {
+    font-size: 4rem;
+    margin: 1.8rem 0;
+    color: rgb(73, 76, 95);
+    vertical-align: middle;
+}
+
+h3 span {
+    vertical-align: middle;
+}
+
+.small-font {
+    font-size: 50%;
+    vertical-align: middle;
+    margin: auto 10px;    
+}
+
+.monthly-price {
+    display: none;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+hr {
+    border-color: rgb(179, 181, 198);
+    border-style: solid;
+    border-width: 0.5px;
+    margin: 0;
+}
+
+li {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin: 1rem;
+}
+
+.button {
+    width: 100%;
+    height: 3rem;
+    background: linear-gradient(to right, rgb(163, 168, 240), rgb(105, 111, 221) 40%);
+    border: none;
+    border-radius: 7px;
+    margin-top: 2rem;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.button:hover,
+.button:active {
+    background: white;
+    border: 1px solid rgb(105, 111, 221);
+    cursor: pointer;
+    color: rgb(105, 111, 221);
+}
+
+.button:focus {
+    outline: none;
+}
+
+#professional {
+    background: linear-gradient(to bottom, rgb(163, 168, 240), rgb(105, 111, 221) 40%);
+    color: white;
+}
+
+#professional .button {
+    background: white;
+    color: rgb(105, 111, 221);
+}
+
+#professional h3 {
+    color: white;
+}
+
+#professional .button:hover,
+#professional .button:active {
+    background: none;
+    border-color: white;
+    color: white;
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 930px) {
+    main {
+        min-width: 960px;
+        text-align: center;
+    }
+
+    .background-image {
+        background: url("images/bg-top.svg") top right/auto 80% no-repeat, url("images/bg-bottom.svg") left bottom/auto 40% no-repeat;
+    }
+
+    section.plans {
+        display: inline-block;
+        width: 25%;
+        margin: 0;
+        vertical-align: middle;
+        min-width: 320px;
+    }
+
+    #professional {
+        height: 510px;
+    }
+
+    #basic {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    #master {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
