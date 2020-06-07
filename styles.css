@@ -50,6 +50,7 @@ header h2 {
     margin: 0 1.5rem;
 }
 
+
 .slider {
     position: absolute;
     cursor: pointer;
@@ -60,6 +61,7 @@ header h2 {
     background: linear-gradient(to right, rgb(163, 168, 240), rgb(105, 111, 221));
     border-radius: 25px;
 }
+
 
 .slider::before {
     position: absolute;
@@ -75,6 +77,10 @@ header h2 {
 
 input:checked + .slider::before {
     transform: translateX(20.3px);
+}
+
+#checkbox:focus {
+    outline: none;
 }
 
 main {
